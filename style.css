@@ -1,61 +1,131 @@
-body{
-    background: linear-gradient(to bottom, lightblue,pink);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body,html {
+    background: linear-gradient(to bottom, #a2d4f2, #fbc2eb);
     background-repeat: no-repeat;
-    height: 100vh;
+    background-size: cover;
+    overflow-x: hidden;
 }
 
-header{
-       background-color: rgb(225, 114, 225);
+header {
+    position: sticky;
+    top: 0;
+    background-color:rgb(209, 112, 216);
+    margin:15px;
 }
 
-.item a{
-    color: white;
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-family: sans-serif;
-    transition: 0.2s ease;
-}
-
-.item a:hover{
-    color: blueviolet;
-}
-
-.item a{
-    padding: 8px 8px;
-    font-size: 20px;
-    border-radius: 5px;
-    transition: 0.2s ease;
-}
-
-.item a:hover{
-    background-color:white;
-}
-
-.navbar{
-    display:flex;
-    align-items:center;
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
     padding-left: 15px;
     padding-right: 15px;
-
 }
-.logo{
+
+.logo {
     display: flex;
     align-items: center;
-    gap:10px;
-}
-#logo-img {
-    border-radius: 50%;
-    height:40px;
-}
-.logo-text{
-    color: white;
-    font-family: 'Cofortaa','Segoe UI', 'Trebuchet MS', 'Verdana', sans-serif;
-    font-size: 1.2rem;
+    gap: 10px;
 }
 
-.menu{
-    display:flex;
-    gap:20px;
-    list-style:none;
+#logo-img {
+    border-radius: 50%;
+    height: 40px;
 }
+
+.logo-text {
+    color: white;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.item a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 8px 8px;
+    transition: all 0.2s ease;
+}
+
+.item a:hover {
+    background-color: white;
+    color: blueviolet;
+}
+
+.firstpage {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.title {
+    color: rgb(209, 112, 216);
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(183, 11, 163, 0.5);
+}
+
+.dates {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #8f14b5;
+    font-weight: bold;
+}
+
+.content-box {
+    position: relative;
+    padding: 2rem;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 12px;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+.content-box::before,
+.content-box::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/star.png");
+    background-size: contain;
+}
+
+.content-box::before {
+    top: 10px;
+    left: 10px;
+}
+
+.content-box::after {
+    bottom: 10px;
+    right: 10px;
+}
+
+
