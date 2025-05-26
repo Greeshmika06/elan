@@ -1,0 +1,61 @@
+body{
+    background: linear-gradient(to bottom, lightblue,pink);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+header{
+       background-color: rgb(225, 114, 225);
+}
+
+.item a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-family: sans-serif;
+    transition: 0.2s ease;
+}
+
+.item a:hover{
+    color: blueviolet;
+}
+
+.item a{
+    padding: 8px 8px;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: 0.2s ease;
+}
+
+.item a:hover{
+    background-color:white;
+}
+
+.navbar{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+#logo-img {
+    border-radius: 50%;
+    height:40px;
+}
+.logo-text{
+    color: white;
+    font-family: 'Cofortaa','Segoe UI', 'Trebuchet MS', 'Verdana', sans-serif;
+    font-size: 1.2rem;
+}
+
+.menu{
+    display:flex;
+    gap:20px;
+    list-style:none;
+}
