@@ -19,7 +19,7 @@ header {
     position: sticky;
     top: 0;
     background-color:rgb(209, 112, 216);
-    margin:15px;
+    z-index: 1000;
 }
 
 .navbar {
@@ -71,8 +71,8 @@ header {
     color: blueviolet;
 }
 
-.firstpage {
-    min-height: 100vh;
+.firstpage ,.secondpage{
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -126,6 +126,30 @@ header {
 .content-box::after {
     bottom: 10px;
     right: 10px;
+}
+
+.secondpage{
+    padding-top: 100px;
+}
+
+
+.theme{
+        color: rgb(209, 112, 216);
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(183, 11, 163, 0.5);
+}
+
+.message{
+    font-family: 'Gloria Hallelujah', cursive;
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#image img{
+    height:80%;
 }
 
 
