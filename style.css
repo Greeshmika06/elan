@@ -156,31 +156,57 @@ header {
 margin-bottom: 30px;
 }
 
-.events-slider {
-    width: 360px; /* 3 boxes * 120px each */
-  overflow-x: scroll;
-  margin: auto;
-  scroll-behavior: smooth;
+.container{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+.left img, .right img{
+  width:40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.box-container{
+    width: 490px;
+    overflow:hidden;
 }
 
 .events-box{
-    display: flex;
-  gap: 20px;
-  padding: 0 20px;
+    display:flex;
+    gap:20px;
     
 }
 
 
-
-
 .box{
-    flex: 0 0 110px;
-  height: 140px;
+  flex: 0 0 150px;
+  height: 200px;
   background: white;
-  border-radius: 10px;
   transition: transform 0.3s ease;
 }
-.box.active {
-    transform: scale(1.4);
-    z-index: 1;
+.box.event1{
+    border: 2px solid black;
+}
+.box.event2{
+    border: 2px solid red;
+}
+.box.event3{
+    border: 2px solid blue;
+}
+.box.event4{
+    border: 2px solid green;
+}
+.box.event5{
+    border: 2px solid rgb(200, 231, 22);
+}
+.box.event6{
+    border: 2px solid rgb(134, 219, 219);
+}
+.box.event7{
+    border: 2px solid rgb(0, 0, 0);
 }
