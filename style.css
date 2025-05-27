@@ -71,7 +71,7 @@ header {
     color: blueviolet;
 }
 
-.firstpage ,.secondpage{
+.firstpage ,.secondpage, .thirdpage{
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -133,7 +133,7 @@ header {
 }
 
 
-.theme{
+.theme, .events{
         color: rgb(209, 112, 216);
     font-family: 'Cinzel Decorative', serif;
     font-size: 3rem;
@@ -152,4 +152,35 @@ header {
     height:80%;
 }
 
+.events{
+margin-bottom: 30px;
+}
 
+.events-slider {
+    width: 360px; /* 3 boxes * 120px each */
+  overflow-x: scroll;
+  margin: auto;
+  scroll-behavior: smooth;
+}
+
+.events-box{
+    display: flex;
+  gap: 20px;
+  padding: 0 20px;
+    
+}
+
+
+
+
+.box{
+    flex: 0 0 110px;
+  height: 140px;
+  background: white;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.box.active {
+    transform: scale(1.4);
+    z-index: 1;
+}
