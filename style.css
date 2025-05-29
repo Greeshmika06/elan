@@ -1,19 +1,33 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
+  height: 100%;
+  overflow-x: hidden;
 }
 
-body,html {
-    background: linear-gradient(to bottom, #a2d4f2, #fbc2eb);
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow-x: hidden;
+body {
+  background: linear-gradient(-45deg, #a2d4f2, #fbc2eb, #a2d4f2,#fbc2eb);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  color: white;
 }
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 
 header {
     position: sticky;
@@ -89,6 +103,7 @@ header {
     letter-spacing: 4px;
     margin-bottom: 10px;
     text-shadow: 2px 2px 8px rgba(183, 11, 163, 0.5);
+     animation: eventsScale 2s ease-in-out infinite;
 }
 
 .dates {
@@ -176,6 +191,7 @@ header {
     font-size: 3rem;
     margin-bottom: 10px;
     text-shadow: 2px 2px 8px rgba(183, 11, 163, 0.5);
+    animation: eventsScale 2s ease-in-out infinite;
 }
 
 .aboutevent{
@@ -196,6 +212,14 @@ header {
 .events{
 margin-bottom: 30px;
 }
+@keyframes eventsScale{
+    0%,100%{
+        transform: scale(0.95);
+    }
+    50%{
+        transform:scale(1.05);
+    }
+}
 
 .container{
     display: flex;
@@ -203,17 +227,22 @@ margin-bottom: 30px;
   justify-content: center;
   gap: 10px;
   max-width: 100%;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .left img, .right img{
   width:40px;
   border-radius: 50%;
   cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.left img:hover, .right img:hover {
+  transform: scale(1.1);
 }
 
 .box-container{
-    width: 490px;
+    max-width: 490px;
     overflow:hidden;
 }
 

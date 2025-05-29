@@ -51,3 +51,5 @@ function updateCountdown() {
 
 updateCountdown();
 const timerInterval = setInterval(updateCountdown, 1000);
+
+
